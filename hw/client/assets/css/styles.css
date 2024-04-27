@@ -1,6 +1,9 @@
 :root {
   --bg-color-app: #aeaeae;
+  --bg-color-app-dark: #5aaba5;
+
   --bg-color-blocks: #5abba5;
+  --bg-color-blocks-dark: #303030;
 }
 
 * {
@@ -11,7 +14,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: var(--bg-color-app);
+  background-color: var(--bg-color-app-dark);
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -29,7 +32,7 @@ body {
   justify-content: start;
   align-items: center;
   padding: 20px;
-  background-color: var(--bg-color-blocks);
+  background-color: var(--bg-color-blocks-dark);
 
   & .logo-container {
     /* background-color: red; */
@@ -99,11 +102,12 @@ body {
   justify-content: start;
   align-items: center;
   padding: 20px;
-  background-color: var(--bg-color-blocks);
+  background-color: var(--bg-color-blocks-dark);
+  color: #fff;
 
   & .breadcrumb {
     & > h1 {
-      color: white;
+      /* color: white; */
     }
   }
 
@@ -112,7 +116,7 @@ body {
       & > ul {
         & > span {
           font-size: 20px;
-          color: white;
+          /* color: white; */
         }
       }
     }
@@ -157,7 +161,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: var(--bg-color-blocks);
+  background-color: var(--bg-color-blocks-dark);
   & .footer-title {
     & > span {
       font-size: 1rem;
