@@ -122,6 +122,34 @@ body {
         }
       }
     }
+
+    & .task-container {
+      & .task-get-btn {
+        padding: 10px;
+        background-color: #18af8c;
+        border-radius: 5px;
+      }
+
+      & .task-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 5px;
+        & .task-list-item {
+          line-height: 2rem;
+          flex-grow: 1;
+          flex-basis: 200;
+          border: 2px solid #18af8c;
+          border-radius: 20px;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+          }
+          /* background-color: #aeaeae; */
+        }
+      }
+    }
   }
 
   & .about-page {

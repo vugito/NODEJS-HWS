@@ -31,14 +31,26 @@
           <h1>Task Page</h1>
         </div>
         <header class="main-header">
-          <h2>Homework -</h2>
+          <h2>Homework - 1</h2>
         </header>
         <div class="main-body">
-          <ol>
-            <li>
-              <span>AAA</span>
-            </li>
-          </ol>
+          <div class="task-container" id="task-container">
+            <button id="checkBtn" class="task-get-btn">Check List</button>
+            <label for="all">ALL</label>
+            <input type="radio" value="all" name="radioGroup" id="all" />
+            <label for="Baku">БАКУ</label>
+            <input type="radio" value="baku" name="radioGroup" id="baku" />
+            <label for="Gence">ГЯНДЖА</label>
+            <input type="radio" value="gence" name="radioGroup" id="gence" />
+            <label for="Sumgait">СУМГАИТ</label>
+            <input
+              type="radio"
+              value="sumgait"
+              name="radioGroup"
+              id="sumgait"
+            />
+            <ul id="task-list" class="task-list"></ul>
+          </div>
         </div>
       </main>
       <footer class="footer">

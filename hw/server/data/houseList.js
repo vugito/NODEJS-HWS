@@ -1,14 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-
-const app = express();
-const HOST = 7000;
-
-const data = [
+const houseList = [
   {
     id: 1,
     name: "Уютная квартира у моря",
-    city: "Baku",
+    city: "Баку",
     price: 120000,
     currency: "AZN",
     rooms: 2,
@@ -18,7 +12,7 @@ const data = [
   {
     id: 2,
     name: "Просторная квартира в центре",
-    city: "Gence",
+    city: "Гянджа",
     price: 85000,
     currency: "USD",
     rooms: 3,
@@ -28,7 +22,7 @@ const data = [
   {
     id: 3,
     name: "Современная студия в центре города",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 60000,
     currency: "AZN",
     rooms: 1,
@@ -38,7 +32,7 @@ const data = [
   {
     id: 4,
     name: "Трехкомнатная квартира с видом на парк",
-    city: "Baku",
+    city: "Баку",
     price: 210000,
     currency: "USD",
     rooms: 3,
@@ -48,7 +42,7 @@ const data = [
   {
     id: 5,
     name: "Уютная однокомнатная квартира в историческом районе",
-    city: "Gence",
+    city: "Гянджа",
     price: 55000,
     currency: "AZN",
     rooms: 1,
@@ -58,7 +52,7 @@ const data = [
   {
     id: 6,
     name: "Светлая двушка в новостройке",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 95000,
     currency: "USD",
     rooms: 2,
@@ -68,7 +62,7 @@ const data = [
   {
     id: 7,
     name: "Квартира с видом на море",
-    city: "Baku",
+    city: "Баку",
     price: 180000,
     currency: "AZN",
     rooms: 3,
@@ -78,7 +72,7 @@ const data = [
   {
     id: 8,
     name: "Студия с балконом",
-    city: "Gence",
+    city: "Гянджа",
     price: 75000,
     currency: "USD",
     rooms: 1,
@@ -88,7 +82,7 @@ const data = [
   {
     id: 9,
     name: "Светлая квартира в центре",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 72000,
     currency: "AZN",
     rooms: 2,
@@ -98,7 +92,7 @@ const data = [
   {
     id: 10,
     name: "Комфортабельная трешка рядом с парком",
-    city: "Baku",
+    city: "Баку",
     price: 240000,
     currency: "USD",
     rooms: 3,
@@ -108,7 +102,7 @@ const data = [
   {
     id: 11,
     name: "Уютная квартира в тихом районе",
-    city: "Gence",
+    city: "Гянджа",
     price: 60000,
     currency: "AZN",
     rooms: 2,
@@ -118,7 +112,7 @@ const data = [
   {
     id: 12,
     name: "Студия с видом на город",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 68000,
     currency: "USD",
     rooms: 1,
@@ -128,7 +122,7 @@ const data = [
   {
     id: 13,
     name: "Квартира в центре с собственной парковкой",
-    city: "Baku",
+    city: "Баку",
     price: 280000,
     currency: "AZN",
     rooms: 4,
@@ -138,7 +132,7 @@ const data = [
   {
     id: 14,
     name: "Современная квартира в жилом комплексе",
-    city: "Gence",
+    city: "Гянджа",
     price: 90000,
     currency: "USD",
     rooms: 2,
@@ -148,7 +142,7 @@ const data = [
   {
     id: 15,
     name: "Уютная квартира с отличной транспортной доступностью",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 55000,
     currency: "AZN",
     rooms: 1,
@@ -158,7 +152,7 @@ const data = [
   {
     id: 16,
     name: "Трехкомнатная квартира с балконом",
-    city: "Baku",
+    city: "Баку",
     price: 195000,
     currency: "USD",
     rooms: 3,
@@ -168,7 +162,7 @@ const data = [
   {
     id: 17,
     name: "Студия в новом доме",
-    city: "Gence",
+    city: "Гянджа",
     price: 62000,
     currency: "AZN",
     rooms: 1,
@@ -178,7 +172,7 @@ const data = [
   {
     id: 18,
     name: "Светлая квартира с видом на парк",
-    city: "Sumgait",
+    city: "Сумгаит",
     price: 78000,
     currency: "USD",
     rooms: 2,
@@ -188,7 +182,7 @@ const data = [
   {
     id: 19,
     name: "Просторная квартира с отличной планировкой",
-    city: "Baku",
+    city: "Баку",
     price: 220000,
     currency: "AZN",
     rooms: 4,
@@ -198,7 +192,7 @@ const data = [
   {
     id: 20,
     name: "Компактная квартира для молодой семьи",
-    city: "Gence",
+    city: "Гянджа",
     price: 50000,
     currency: "USD",
     rooms: 1,
@@ -206,25 +200,3 @@ const data = [
     floor: 2,
   },
 ];
-
-app.use(cors());
-
-app.get("/items", (req, res) => {
-  let query = req.query;
-
-  console.log(query.filter);
-
-  if (query && query.filter !== "all") {
-    let newArr = data.filter(
-      (item) => item.city.toLowerCase() === query.filter
-    );
-    console.log(newArr);
-    res.json(newArr);
-  } else {
-    res.json(data);
-  }
-});
-
-app.listen(HOST, () => {
-  console.log("Port " + HOST + " listens. ");
-});
