@@ -2,7 +2,7 @@ const houseList = [
   {
     id: 1,
     name: "Уютная квартира у моря",
-    city: "Баку",
+    city: "Baku",
     price: 120000,
     currency: "AZN",
     rooms: 2,
@@ -12,7 +12,7 @@ const houseList = [
   {
     id: 2,
     name: "Просторная квартира в центре",
-    city: "Гянджа",
+    city: "Gence",
     price: 85000,
     currency: "USD",
     rooms: 3,
@@ -22,7 +22,7 @@ const houseList = [
   {
     id: 3,
     name: "Современная студия в центре города",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 60000,
     currency: "AZN",
     rooms: 1,
@@ -32,7 +32,7 @@ const houseList = [
   {
     id: 4,
     name: "Трехкомнатная квартира с видом на парк",
-    city: "Баку",
+    city: "Baku",
     price: 210000,
     currency: "USD",
     rooms: 3,
@@ -42,7 +42,7 @@ const houseList = [
   {
     id: 5,
     name: "Уютная однокомнатная квартира в историческом районе",
-    city: "Гянджа",
+    city: "Gence",
     price: 55000,
     currency: "AZN",
     rooms: 1,
@@ -52,7 +52,7 @@ const houseList = [
   {
     id: 6,
     name: "Светлая двушка в новостройке",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 95000,
     currency: "USD",
     rooms: 2,
@@ -62,7 +62,7 @@ const houseList = [
   {
     id: 7,
     name: "Квартира с видом на море",
-    city: "Баку",
+    city: "Baku",
     price: 180000,
     currency: "AZN",
     rooms: 3,
@@ -72,7 +72,7 @@ const houseList = [
   {
     id: 8,
     name: "Студия с балконом",
-    city: "Гянджа",
+    city: "Gence",
     price: 75000,
     currency: "USD",
     rooms: 1,
@@ -82,7 +82,7 @@ const houseList = [
   {
     id: 9,
     name: "Светлая квартира в центре",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 72000,
     currency: "AZN",
     rooms: 2,
@@ -92,7 +92,7 @@ const houseList = [
   {
     id: 10,
     name: "Комфортабельная трешка рядом с парком",
-    city: "Баку",
+    city: "Baku",
     price: 240000,
     currency: "USD",
     rooms: 3,
@@ -102,7 +102,7 @@ const houseList = [
   {
     id: 11,
     name: "Уютная квартира в тихом районе",
-    city: "Гянджа",
+    city: "Gence",
     price: 60000,
     currency: "AZN",
     rooms: 2,
@@ -112,7 +112,7 @@ const houseList = [
   {
     id: 12,
     name: "Студия с видом на город",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 68000,
     currency: "USD",
     rooms: 1,
@@ -122,7 +122,7 @@ const houseList = [
   {
     id: 13,
     name: "Квартира в центре с собственной парковкой",
-    city: "Баку",
+    city: "Baku",
     price: 280000,
     currency: "AZN",
     rooms: 4,
@@ -132,7 +132,7 @@ const houseList = [
   {
     id: 14,
     name: "Современная квартира в жилом комплексе",
-    city: "Гянджа",
+    city: "Gence",
     price: 90000,
     currency: "USD",
     rooms: 2,
@@ -142,7 +142,7 @@ const houseList = [
   {
     id: 15,
     name: "Уютная квартира с отличной транспортной доступностью",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 55000,
     currency: "AZN",
     rooms: 1,
@@ -152,7 +152,7 @@ const houseList = [
   {
     id: 16,
     name: "Трехкомнатная квартира с балконом",
-    city: "Баку",
+    city: "Baku",
     price: 195000,
     currency: "USD",
     rooms: 3,
@@ -162,7 +162,7 @@ const houseList = [
   {
     id: 17,
     name: "Студия в новом доме",
-    city: "Гянджа",
+    city: "Gence",
     price: 62000,
     currency: "AZN",
     rooms: 1,
@@ -172,7 +172,7 @@ const houseList = [
   {
     id: 18,
     name: "Светлая квартира с видом на парк",
-    city: "Сумгаит",
+    city: "Sumgait",
     price: 78000,
     currency: "USD",
     rooms: 2,
@@ -182,7 +182,7 @@ const houseList = [
   {
     id: 19,
     name: "Просторная квартира с отличной планировкой",
-    city: "Баку",
+    city: "Baku",
     price: 220000,
     currency: "AZN",
     rooms: 4,
@@ -192,7 +192,7 @@ const houseList = [
   {
     id: 20,
     name: "Компактная квартира для молодой семьи",
-    city: "Гянджа",
+    city: "Gence",
     price: 50000,
     currency: "USD",
     rooms: 1,
@@ -200,3 +200,5 @@ const houseList = [
     floor: 2,
   },
 ];
+
+module.exports = houseList;
